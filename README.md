@@ -38,15 +38,13 @@ Navigate to the root directory then:
 
 1. Backend:
   - Navigate to the Backend directory: `cd Backend`
-  - Run the following commands:
-    - `mvn clean package`
-    - `java -jar target/eformer.backend.jar`
+  - Run `mvn spring-boot:run`
   - Allow incomming connections, if asked. 
   - Now the server is running & the APIs should function properly
 
 2. Frontend:
   - Navigate to the Frontend directory: `cd Frontend`
-  - Run `mvn run:javafx`
+  - Run `mvn javafx:run`
   - By default there is only one account, the Admin:
     - Username: Admin
     - Password: 123456789
