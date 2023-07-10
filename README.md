@@ -23,7 +23,6 @@ eFormer is a simple eCommerce dashboard application that consists of a frontend 
 Before running the project, ensure you have the following installed:
 
 - JDK: v20
-- JavaFX-SDK: v20
 - Maven: v3.6.3
 
 ## Getting Started
@@ -41,5 +40,10 @@ Navigate to the root directory then:
 
 2. Frontend:
   - Navigate to the Frontend directory: `cd Frontend`
-  - Run the following commands:
-    - `mvn ` 
+  - Run `mvn run:javafx`
+  - By default there is only one account the Admin:
+    - Username: Admin
+    - Password: 123456789
+    - This user can be used to create other accounts.
+      
+
