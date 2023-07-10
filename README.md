@@ -47,7 +47,7 @@ Navigate to the root directory then:
 2. Frontend:
   - Navigate to the Frontend directory: `cd Frontend`
   - Run `mvn run:javafx`
-  - By default there is only one account the Admin:
+  - By default there is only one account, the Admin:
     - Username: Admin
     - Password: 123456789
     - This user can be used to create other accounts.
