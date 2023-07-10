@@ -1,0 +1,175 @@
+@import './Constants.css';
+
+/*.table-view .column-header-background{*/
+/*    -fx-background-color: linear-gradient(to bottom, #ee5500, #ff9900);*/
+/*    -fx-text-fill: white;*/
+/*    !*-fx-background-radius: 7px 7px 0px 0px;*!*/
+/*    !*-fx-background-insets: 0 11px 0 0;*!*/
+/*    !*-fx-padding: 0 0 5px 0;*!*/
+/*}*/
+
+/*.table-view .column-header {*/
+/*    -fx-background-color: linear-gradient(to bottom, #ee5500, #ff9900);*/
+/*    -fx-text-fill: white;*/
+/*}*/
+
+.buttonMenu{
+    -fx-background-color:
+        transparent;
+    -fx-text-fill: white;
+    -fx-border-color: transparent;
+    -fx-background-insets: 0,1,2;
+    -fx-padding: 5 0 5 0;
+}
+
+.buttonMenu:focused{
+    -fx-background-image: url("../images/CoarseGrid.png");
+    -fx-background-color:
+        linear-gradient(to left, -secondary-cm, -main-c2);
+    -fx-border-color: -secondary-cm;
+    -fx-border-width: 0 4 0 0;
+}
+
+.buttonMenu:pressed{
+    -fx-text-fill: white;
+}
+
+.buttonMenu:hover{
+    -fx-background-image: url("../images/CoarseGrid.png");
+    -fx-background-color:
+        linear-gradient(-main-cm, -main-c3),
+        radial-gradient(center 30% 0%, radius 40%, -main-c2, rgba(255,255,255,0));
+    -fx-bottom-left: -secondary-cm;
+    -fx-effect: dropshadow( three-pass-box , -secondary-cm , 0, 0, 4, 0);
+    -fx-text-fill: white;
+}
+
+#imgHome:hover{
+}
+
+.scroll-pane {
+    -fx-padding: 0;
+    -fx-background: white;
+}
+
+.list-view .scroll-bar:horizontal .track,
+.list-view .scroll-bar:vertical .track{
+
+    -fx-border-color: derive(#D7D7D7,100%);
+    -fx-background-color: derive(#D7D7D7,100%);
+    -fx-background-radius: 2em;
+    -fx-border-radius:2em;
+}
+
+/*The main scrollbar   which we drag every time (movable)*/
+.list-view .scroll-bar:horizontal .thumb,
+.list-view .scroll-bar:vertical .thumb {
+    -fx-background-color:derive(black,90%);
+    -fx-background-insets: 2, 0, 0;
+    -fx-background-radius: 2em;
+
+}
+.list-view .scroll-bar:horizontal .increment-button ,
+.list-view .mylistview .scroll-bar:horizontal .decrement-button {
+
+    -fx-border-color:derive(#D7D7D7,100%);
+    -fx-background-color: derive(#D7D7D7,100%);
+    -fx-background-radius: 0em;
+    -fx-padding:0 0 10 0;
+
+}
+.list-view .scroll-bar:horizontal .increment-arrow,
+.list-view .scroll-bar:horizontal .decrement-arrow,
+.list-view .scroll-bar:horizontal .increment-button,
+.list-view .scroll-bar:horizontal .decrement-button {
+    visibility: hidden;
+    -fx-border-color:derive(#D7D7D7,100%);
+    -fx-background-color: derive(#D7D7D7,100%);
+    -fx-padding:0;
+}
+
+.list-view .scroll-bar:horizontal .increment-button ,
+.list-view .mylistview .scroll-bar:horizontal .decrement-button {
+    -fx-border-color:derive(#D7D7D7,100%);
+    -fx-background-color: derive(#D7D7D7,100%);
+    /*    -fx-background-color:transparent;*/
+    -fx-background-radius: 0em;
+    -fx-padding:0 0 10 0;
+
+}
+
+.list-view .scroll-bar:vertical .increment-arrow,
+.list-view .scroll-bar:vertical .decrement-arrow,
+.list-view .scroll-bar:vertical .increment-button,
+.list-view .scroll-bar:vertical .decrement-button {
+}
+.list-view .scroll-bar:vertical .increment-button ,
+.list-view .mylistview .scroll-bar:vertical .decrement-button {
+}
+
+#sideMenuToogleBtn{
+    -fx-padding: 0;
+    -fx-background-color: transparent;
+}
+
+#sideMenuToogleBtn:hover{
+    -fx-background-color: none;
+}
+
+#btnLogOut{
+}
+
+#acHead{
+    -fx-background-color:
+        linear-gradient(-main-c2 0%, -main-cm 20%, -main-c1 100%),
+        linear-gradient(-main-c3, -main-c1),
+        radial-gradient(center 30% 0%, radius 100%, -main-c2, rgba(255,255,255,0));
+
+}
+
+#acDashBord{
+    -fx-background-image: url("../images/CoarseGrid.png");
+    -fx-background-color:
+        linear-gradient(-main-c2 0%, -main-cm 20%, -main-c1 100%),
+        linear-gradient(-main-c3, -main-c1),
+        radial-gradient(center 50% 0%, radius 100%, -main-c2, rgba(255,255,255,0));
+}
+
+#mbtnUsrInfoBox{
+    -fx-background-color: -main-c3;
+    -fx-text-fill: white;
+}
+
+#mbtnUsrInfoBox:hover, #mbtnUsrInfoBox:focused{
+    /*-fx-background-color:#494949;*/
+}
+
+#circleImgUsr{
+    -fx-padding: 0;
+}
+
+#lblUsrName{
+    -fx-text-fill: white;
+}
+
+.labelColor {
+    -fx-text-fill: #FFFFFF;
+
+}
+
+#btnLogout{
+    -fx-background-color: #ffffff;
+    -fx-text-fill: black;
+    -fx-border-width: 0px 0px 0px 0px;
+    -fx-border-radius: 0px;
+    -fx-background-radius: 0px;
+}
+
+#btnLogout:hover{
+    -fx-background-color: -secondary-c1;
+    -fx-cursor: hand;
+    -fx-rotate: 3;
+    transition-delay: 2s;
+    -fx-effect: dropshadow(three-pass-box, -secondary-cm, 10, 0, 0, 0);
+}
+
