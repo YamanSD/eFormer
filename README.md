@@ -36,7 +36,10 @@ Navigate to the root directory then:
   - Run the following commands:
     - `mvn clean package`
     - `java -jar target/eformer.backend.jar`
+  - Allow incomming connections, if asked. 
   - Now the server is running & the APIs should function properly
 
 2. Frontend:
-
+  - Navigate to the Frontend directory: `cd Frontend`
+  - Run the following commands:
+    - `mvn ` 
