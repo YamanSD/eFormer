@@ -1,9 +1,6 @@
 package eformer.front.eformer_frontend;
 
 import eformer.front.eformer_frontend.connector.RequestsGateway;
-import javafx.animation.KeyFrame;
-import javafx.animation.KeyValue;
-import javafx.animation.Timeline;
 import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.fxml.FXMLLoader;
@@ -17,10 +14,8 @@ import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
-import javafx.util.Duration;
 import javafx.util.Pair;
 
-import java.io.File;
 import java.io.IOException;
 import java.util.Objects;
 import java.util.Optional;
@@ -36,10 +31,11 @@ public class Main extends Application {
         org.burningwave.core.assembler.StaticComponentContainer.Modules.exportAllToAll();
 
         Optional<Pair<String, String>> result = Optional.empty();
+        // Create the custom dialog.
+        Dialog<Pair<String, String>> dialog = new Dialog<>();
 
         while (result.isEmpty()) {
-            // Create the custom dialog.
-            Dialog<Pair<String, String>> dialog = new Dialog<>();
+            dialog = new Dialog<>();
             dialog.setTitle("Login");
             dialog.setHeaderText("Welcome!");
 
@@ -92,6 +88,10 @@ public class Main extends Application {
                 return null;
             });
 
+            dialog.setOnHidden(response -> {
+
+            });
+
             result = dialog.showAndWait();
 
             if (result.isPresent()) {
@@ -105,42 +105,30 @@ public class Main extends Application {
             }
         }
 
+        dialog.close();
         stage.getIcons().clear();
         stage.getIcons().add(getImage("cart.png"));
         stage.setFullScreenExitHint("");
         stage.setTitle("eFormer");
+        stage.setFullScreen(true);
 
-        Splash splash = new Splash();
-        splash.show();
-        stage.setScene(splash.getSplashScene());
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("/views/Dashboard.fxml"));
+            Scene scene = new Scene(fxmlLoader.load());
 
-        splash.getSequentialTransition().setOnFinished(e -> {
-            Timeline timeline = new Timeline();
-            KeyFrame key = new KeyFrame(Duration.millis(800),
-                    new KeyValue(splash.getSplashScene().getRoot().opacityProperty(), 0));
-            timeline.getKeyFrames().add(key);
-            timeline.setOnFinished((event) -> {
-                try {
-                    FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("/views/Dashboard.fxml"));
-                    Scene scene = new Scene(fxmlLoader.load());
-
-                    scene.addEventFilter(KeyEvent.KEY_PRESSED, ke -> {
-                        if (ke.getCode() == KeyCode.ESCAPE) {
-                            System.exit(0);
-                        }
-                    });
-
-                    stage.setScene(scene);
-                    stage.setResizable(true);
-                    stage.setMaximized(true);
-                }
-                catch (IOException ex) {
-                    RequestsGateway.displayException(ex);
+            scene.addEventFilter(KeyEvent.KEY_PRESSED, ke -> {
+                if (ke.getCode() == KeyCode.ESCAPE) {
+                    System.exit(0);
                 }
             });
 
-            timeline.play();
-        });
+            stage.setScene(scene);
+            stage.setResizable(true);
+            stage.setMaximized(true);
+        }
+        catch (IOException ex) {
+            RequestsGateway.displayException(ex);
+        }
 
         stage.setWidth(450);
         stage.setHeight(280);
