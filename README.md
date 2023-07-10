@@ -25,11 +25,18 @@ Before running the project, ensure you have the following installed:
 - JDK: v20
 - JavaFX-SDK: v20
 - Maven: v3.6.3
-  - For Maven installation check: https://maven.apache.org/guides/getting-started/
 
 ## Getting Started
 
+Make sure there are no applications using ports 8080 & 3306.
+Navigate to the root directory then:
+
 1. Backend:
+  - Navigate to the Backend directory: `cd Backend`
+  - Run the following commands:
+    - `mvn clean package`
+    - `java -jar target/eformer.backend.jar`
+  - Now the server is running & the APIs should function properly
 
 2. Frontend:
 
