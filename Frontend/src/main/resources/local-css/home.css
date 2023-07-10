@@ -1,0 +1,18 @@
+/*
+ * Empty Stylesheet file.
+ */
+@import './Constants.css';
+
+.euroMacHead{
+   -fx-background-color: -secondary-c2;
+    -fx-background-radius:10;
+    /*-fx-border-style:solid;*/
+    /*-fx-border-width: 2px;*/
+    -fx-background-size: 100%;
+    /*-fx-border-radius:2;*/
+    -fx-background-color:
+        linear-gradient(from 0% 0% to 80% 80%, -secondary-cm, -secondary-c2);
+        /*radial-gradient(center 50% -40%, radius 200%, #b8ee36 45%, #80c800 50%);*/
+    
+}
+

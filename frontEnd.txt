@@ -1,0 +1,4 @@
+java -jar eFormer.jar
+
+
+mvn clean package && java -jar target/eformer.backend.jar
