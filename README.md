@@ -1,10 +1,11 @@
-# eFormer
+# 🛒 eFormer
 
 ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
 ![Hibernate](https://img.shields.io/badge/Hibernate-59666C?style=for-the-badge&logo=Hibernate&logoColor=white)
 ![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white)
 ![Spring](https://img.shields.io/badge/spring-%236DB33F.svg?style=for-the-badge&logo=spring&logoColor=white)
 
+![eFormer](Images/eFormer4.png)
 
 eFormer is a simple eCommerce dashboard application that consists of a frontend and a backend. The backend is built using Spring Boot, Hibernate, and Spring Security, providing REST APIs for interaction. The frontend is developed using JavaFX and relies on the APIs provided by the backend.
 
@@ -56,4 +57,3 @@ Navigate to the root directory then:
 ![eFormer](Images/eFormer1.png)
 ![eFormer](Images/eFormer2.png)
 ![eFormer](Images/eFormer3.png)
-![eFormer](Images/eFormer4.png)
